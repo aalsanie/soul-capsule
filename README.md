@@ -18,6 +18,22 @@ Built to mirror your inner world with expressive fidelity — not just storing w
 
 ---
 
+## 📚 Table of Contents
+
+- [Why SoulCapsule?](#-why-soulcapsule)
+- [Key Features (MVP)](#-key-features-mvp)
+- [Roadmap](#-roadmap)
+- [Tech Stack](#-tech-stack)
+- [Repo Structure (Planned)](#-repo-structure-planned)
+- [Example Use Cases](#example-use-cases)
+- [Long-Term Vision](#long-term-vision)
+- [Manifesto](#-manifesto)
+- [Creator](#-creator)
+- [License](#license)
+- [Status](#status)
+- [Installation (Placeholder)](#installation-placeholder)
+- [Running Locally (Placeholder)](#running-locally-placeholder)
+
 ## 🚀 Why SoulCapsule?
 
 Most tools capture words. We capture **the moment's emotional fingerprint**.  
@@ -120,6 +136,14 @@ We imagine an ecosystem of:
 - **Contextual OS integration**: aware of time, weather, music, mood
 - **Encrypted mind backups**: restore your thought fingerprints across time
 
+---
+## 🧪 Installation (Placeholder)
+
+Instructions to install dependencies and set up the environment will go here.
+
+## 🚦 Running Locally (Placeholder)
+
+Guide on how to start the backend server and (eventually) the frontend.
 ---
 
 ## 📖 Manifesto
