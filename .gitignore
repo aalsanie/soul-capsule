@@ -1,0 +1,65 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+pip-wheel-metadata/
+
+# Environments
+.env
+.venv/
+venv/
+ENV/
+env.bak/
+*.env
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# VS Code
+.vscode/
+.code-workspace
+
+# macOS & system files
+.DS_Store
+Thumbs.db
+
+# Model/data files
+*.ckpt
+*.pt
+*.pth
+*.onnx
+*.pb
+*.bin
+*.tflite
+*.h5
+*.mlmodel
+*.npy
+*.npz
+*.jsonl
+*.db
+*.sqlite
+*.log
+*.csv
+
+# Cache, logs, and outputs
+*.log
+logs/
+cache/
+output/
+*.tmp
+*.bak
+*.swp
+
+# Node/npm if you ever add UI
+node_modules/
+npm-debug.log
+yarn.lock
+package-lock.json
+
+.idea

@@ -1,0 +1,5 @@
+**Tagline:**
+A local-first personalized AI assistant that compresses your mind, tone, and thoughts into a digital memory. Not a chatbot — a soul capsule.
+
+**Description:**
+MyMind is a decentralized GenAI agent that evolves with you. It learns your writing, your mood, and your style — compressing context and meaning into smart, emotionally-aware responses. Built to run locally, remember deeply, and support creatively — MyMind is your AI reflection.
