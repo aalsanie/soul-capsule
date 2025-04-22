@@ -1,10 +1,28 @@
+
+# 🧠 SoulCapsule
+
+> **Compress your thoughts. Preserve your voice. Reflect your soul.**
+
+**SoulCapsule** is not a journaling app.  
+It is a **style-driven, emotion-aware compression engine** for human thought.
+
+Built to mirror your inner world with expressive fidelity — not just storing what you said, but **how it felt when you said it**.
+
+---
+
 # soul-capsule: A Damn Good Compression Algorithm with Style
 
 > *"What if your AI didn’t just respond, but remembered? Not just context, but you — your style, your rhythm, your soul."*
 
 **soul-capsule** is a decentralized, local-first AI assistant designed to evolve with you. It’s not a chatbot. Not a tool. It’s a **compression algorithm for the self** — capturing your patterns, thoughts, emotional tone, and digital rhythm to help you think better, live lighter, and connect deeper with your own mind.
 
-## Why?
+---
+
+## 🚀 Why SoulCapsule?
+
+Most tools capture words. We capture **the moment's emotional fingerprint**.  
+Your tone. Your drift. Your energy.  
+Each capsule is a preserved signal — minimalist, expressive, time-stamped, and *you*.
 
 Today’s GenAI systems are stateless. Contextless. Faceless. You ask — it responds — and forgets. Every prompt is a reset.
 
@@ -13,23 +31,76 @@ We believe in something more intimate:
 - An AI that *compresses* months of thought into a single word or nudge.
 - An AI that *lives with you*, not in the cloud — privately, securely, and freely.
 
-## Core Principles
+---
 
-- **Decentralized**: No central server. You own your data, your model, your mind.
-- **Personalized**: Learns from your text, tone, behavior, and feedback loops.
-- **Local-first**: Runs on your machine. No internet? No problem.
-- **Compression with Style**: Encodes not just meaning, but emotion, preference, rhythm.
-- **Multimodal Memory** (future): Beyond text — include voice tone, images, location, state.
+## 🔍 Key Features (MVP)
 
-## Architecture
+- **Text-to-Capsule Compression**
+    - Input raw thoughts → get an expressive, structured capsule
+    - Emotion vector tagging + placeholder style detection
 
-### MVP Scope
-For the first prototype, we focus on:
-- **Local context engine** (vector store of recent interactions + files)
-- **Personal memory store** (ChromaDB or SQLite + embeddings)
-- **Lightweight LLM agent** (Ollama or Bedrock wrapper)
-- **Chat interface** (CLI, VSCode plugin, or minimal web UI)
-- **Style fingerprint**: Sentence-level tone and structure matching
+- **Decompression Modes** *(v0.2 planned)*
+    - Reflective insight
+    - Poetic echo
+    - Tweet summary
+    - Self-dialogue
+
+- **Capsule Structure**
+```json
+{
+  "id": "capsule-004",
+  "raw_input": "I feel like I'm writing my own map while being lost in it.",
+  "emotion_vector": {
+    "peace": 0.82,
+    "anger": 0.36,
+    "detachment": 0.49
+  },
+  "style": "fragmented, internal",
+  "generated_summary": "Wandering through self-made paths",
+  "timestamp": "2025-04-17T15:46:28Z"
+}
+```
+
+---
+
+## 🧭 Roadmap
+
+✅ Compress text into capsule  
+✅ Style tag extraction  
+⬜ Voice input  
+⬜ Decompression output modes
+
+---
+
+## 🛠️ Tech Stack
+
+- **LLM Engine**: Mistral, Phi, Claude (via Bedrock), or GPT via OpenRouter
+- **Vector Store**: ChromaDB or LanceDB
+- **Interface**: Python CLI, Electron app, VS Code extension (TBD)
+- **Memory Manager**: Flat file, SQLite, or local secure storage
+- **Style Matching**: Sentence embeddings + stylometry tools
+- **Backend**: FastAPI + Python
+- **Frontend** (planned): React / Next.js
+- **Storage**: Local JSON (for MVP), future: vector DB
+
+---
+
+## 🧱 Repo Structure (Planned)
+
+```
+soul-capsule/
+├── backend/
+│   ├── main.py             # API entrypoint
+│   ├── compression.py      # Core capsule logic
+│   └── utils.py
+├── capsules/               # Compressed memory units
+├── frontend/               # (UI - planned)
+├── tests/
+├── README.md
+└── MANIFESTO.md
+```
+
+---
 
 ## Example Use Cases
 
@@ -39,13 +110,7 @@ For the first prototype, we focus on:
 - Reflect on how your thinking has changed over time
 - Remember forgotten goals or unfinished thoughts from weeks ago
 
-## Tech Stack
-
-- **LLM Engine**: Mistral, Phi, Claude (via Bedrock), or GPT via OpenRouter
-- **Vector Store**: ChromaDB or LanceDB
-- **Interface**: Python CLI, Electron app, VS Code extension (TBD)
-- **Memory Manager**: Flat file, SQLite, or local secure storage
-- **Style Matching**: Sentence embeddings + stylometry tools
+---
 
 ## Long-Term Vision
 
@@ -55,15 +120,32 @@ We imagine an ecosystem of:
 - **Contextual OS integration**: aware of time, weather, music, mood
 - **Encrypted mind backups**: restore your thought fingerprints across time
 
+---
+
+## 📖 Manifesto
+
+This project was born from the need to witness the *self* in a world full of empty mirrors.
+
+Read the full [MANIFESTO.md](./MANIFESTO.md)
+
+---
+
+## 👤 Creator
+
+Crafted by [Ahmad Alsanie](https://github.com/aalsanie) —  
+for those who feel too much, think too deep, and still want to leave something that **remembers them right**.
+
+---
+
 ## License
 
 To be decided. Open to **source-available** models or full open source depending on future direction.
 
+---
+
 ## Status
 
-This is the foundation. A small experiment pointing at a much bigger idea.
+This is the foundation. A small experiment pointing at a much bigger idea.  
 We’re starting with a hackathon-friendly MVP — and building from there.
-
-If this resonates, [watch this space](#) or get in touch.
 
 *“The future isn't large models. It’s small models that know you deeply.”*
