@@ -137,13 +137,56 @@ We imagine an ecosystem of:
 - **Encrypted mind backups**: restore your thought fingerprints across time
 
 ---
-## 🧪 Installation (Placeholder)
+## 🧪 Installation
 
-Instructions to install dependencies and set up the environment will go here.
+To run the SoulCapsule backend locally, follow these steps:
 
-## 🚦 Running Locally (Placeholder)
+### 📦 Requirements
+- Python 3.11 (⚠️ Python 3.13 not supported by FastAPI/Pydantic combo yet)
+- Git + terminal (PowerShell, CMD, or Bash)
+- Virtualenv (optional but recommended)
 
-Guide on how to start the backend server and (eventually) the frontend.
+### 📥 Setup
+
+```powershell
+# From your project root
+python -m venv venv
+.
+env\Scripts ctivate         # On Windows
+pip install -r requirements.txt
+```
+
+---
+
+## 🚦 Running Locally
+
+To launch the FastAPI backend:
+
+```powershell
+uvicorn backend.main:app --reload
+```
+
+Then visit:  
+**http://127.0.0.1:8000/docs** — this opens Swagger UI where you can test the API.
+
+---
+
+## 🧪 Running the Test Suite
+
+SoulCapsule uses `pytest` to validate its capsule logic, disk storage, and API behavior.
+
+From the **repo root** (with venv activated):
+
+```powershell
+$env:PYTHONPATH = "."
+python -m pytest backend/tests
+```
+
+This will run:
+- `test_compression.py`: verifies capsule content creation
+- `test_storage.py`: checks save/load integrity
+- `test_api.py`: full POST/GET API validation
+
 ---
 
 ## 📖 Manifesto
