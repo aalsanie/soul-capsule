@@ -151,8 +151,7 @@ To run the SoulCapsule backend locally, follow these steps:
 ```powershell
 # From your project root
 python -m venv venv
-.
-env\Scripts ctivate         # On Windows
+.\venv\Scripts\activate        # On Windows
 pip install -r requirements.txt
 ```
 
