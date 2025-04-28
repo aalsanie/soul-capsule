@@ -1,4 +1,5 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Query
+from typing import Optional
 from backend.models import CapsuleRequest, CapsuleResponse
 from backend.compression import create_capsule
 from backend.storage import save_capsule, load_capsule, list_capsules
@@ -20,8 +21,21 @@ def get_capsule(capsule_id: str):
     return capsule
 
 @app.get("/capsule", response_model=list[CapsuleResponse])
-def get_all_capsules():
-    return list_capsules()
+def get_all_capsules(
+        style: Optional[str] = None,
+        emotion: Optional[str] = None,
+        limit: Optional[int] = Query(default=None, gt=0)
+):
+    capsules = list_capsules()
+
+    if style:
+        capsules = [c for c in capsules if c.style == style]
+    if emotion:
+        capsules = [c for c in capsules if emotion in c.emotion_vector]
+    if limit:
+        capsules = capsules[:limit]
+
+    return capsules
 
 @app.get("/capsule/{capsule_id}/decompress")
 def decompress(capsule_id: str, mode: str = "summary"):
