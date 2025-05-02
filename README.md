@@ -101,19 +101,11 @@ We believe in something more intimate:
 
 ---
 
-## 🧱 Repo Structure (Planned)
+## 🧱 Repo Structure
 
+Run the following to view the current folder structure:
 ```
-soul-capsule/
-├── backend/
-│   ├── main.py             # API entrypoint
-│   ├── compression.py      # Core capsule logic
-│   └── utils.py
-├── capsules/               # Compressed memory units
-├── frontend/               # (UI - planned)
-├── tests/
-├── README.md
-└── MANIFESTO.md
+tree -I '__pycache__|venv' -L 2
 ```
 
 ---
