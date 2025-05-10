@@ -114,19 +114,11 @@ Once installed, capsule creation uses them under the hood to compress thoughts w
 
 ---
 
-## 🧱 Repo Structure (Planned)
+## 🧱 Repo Structure
 
+Run the following to view the current folder structure:
 ```
-soul-capsule/
-├── backend/
-│   ├── main.py             # API entrypoint
-│   ├── compression.py      # Core capsule logic
-│   └── utils.py
-├── capsules/               # Compressed memory units
-├── frontend/               # (UI - planned)
-├── tests/
-├── README.md
-└── MANIFESTO.md
+tree -I '__pycache__|venv' -L 2
 ```
 
 ---
@@ -160,12 +152,6 @@ To run the SoulCapsule backend locally, follow these steps:
 - Virtualenv (optional but recommended)
 
 ### 📥 Setup
-
-To bootstrap the full backend + preload models:
-
-```bash
-chmod +x setup_local_ai.sh
-./setup_local_ai.sh
 
 ```powershell
 # From your project root
