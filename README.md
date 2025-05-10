@@ -193,6 +193,16 @@ This will run:
 
 ---
 
+## Optional: Install with GPU Support
+
+If you plan to run model inference using a GPU (e.g., on a local machine or a cloud instance with CUDA), install the GPU-enabled version of PyTorch:
+
+```bash
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+```
+
+---
+
 ## 📖 Manifesto
 
 This project was born from the need to witness the *self* in a world full of empty mirrors.
