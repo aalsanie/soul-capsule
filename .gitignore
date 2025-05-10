@@ -64,3 +64,6 @@ package-lock.json
 
 .idea
 *.capsulepack
+
+# private
+docs/soulcapsule_local_ai_architecture.md

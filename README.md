@@ -101,6 +101,19 @@ We believe in something more intimate:
 
 ---
 
+### 🧠 Local AI Backend (New in May 2025)
+
+SoulCapsule includes a local-only AI backend for emotion and summary extraction — no cloud dependencies.
+
+**Models Used:**
+- [`t5-small`](https://huggingface.co/t5-small) — Summarization
+- [`j-hartmann/emotion-english-distilroberta-base`](https://huggingface.co/j-hartmann/emotion-english-distilroberta-base) — Emotion classification
+
+These are downloaded and cached via a single setup script.  
+Once installed, capsule creation uses them under the hood to compress thoughts with style and feeling.
+
+---
+
 ## 🧱 Repo Structure (Planned)
 
 ```
@@ -147,6 +160,12 @@ To run the SoulCapsule backend locally, follow these steps:
 - Virtualenv (optional but recommended)
 
 ### 📥 Setup
+
+To bootstrap the full backend + preload models:
+
+```bash
+chmod +x setup_local_ai.sh
+./setup_local_ai.sh
 
 ```powershell
 # From your project root
