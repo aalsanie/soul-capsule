@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException, Query
+from fastapi import FastAPI, HTTPException, Query, Request
 from typing import Optional
 from backend.models import CapsuleRequest, CapsuleResponse
 from backend.compression import create_capsule
@@ -11,7 +11,12 @@ from backend.storage_sqlite import (
     list_capsules_sqlite
 )
 
+from backend.ai.summarizer import LocalSummarizer
+from backend.ai.emotion import LocalEmotionClassifier
+
 app = FastAPI(title="SoulCapsule API")
+summarizer = LocalSummarizer()
+emotioner = LocalEmotionClassifier()
 
 USE_SQLITE = True
 
@@ -64,3 +69,21 @@ def decompress_capsule_route(capsule_id: str, mode: str = "full"):
 
     return {"mode": mode, "output": "Unsupported decompression mode."}
 
+@app.post("/summarize")
+async def summarize_capsule(request: Request):
+    body = await request.json()
+    text = body.get("text")
+    if not text:
+        return {"error": "Missing 'text' field"}
+    result = summarizer.summarize(text)
+    return {"summary": result}
+
+
+@app.post("/emotion")
+async def detect_emotion(request: Request):
+    body = await request.json()
+    text = body.get("text")
+    if not text:
+        return {"error": "Missing 'text' field"}
+    result = emotioner.classify(text)
+    return {"emotions": result}

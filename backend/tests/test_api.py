@@ -7,6 +7,7 @@ from fastapi.testclient import TestClient
 from backend.main import app
 from backend.storage_sqlite import set_db_path, init_db
 
+client = TestClient(app)
 
 @pytest.fixture
 def test_client():
@@ -55,3 +56,19 @@ def test_filter_capsules(test_client):
     response = test_client.get("/capsule?limit=1")
     assert response.status_code == 200
     assert len(response.json()) == 1
+
+def test_summarize_endpoint():
+    response = client.post("/summarize", json={"text": "This is a long sentence that should be summarized."})
+    assert response.status_code == 200
+    assert "summary" in response.json()
+    assert isinstance(response.json()["summary"], str)
+
+
+def test_emotion_endpoint():
+    response = client.post("/emotion", json={"text": "I am so happy and grateful today!"})
+    assert response.status_code == 200
+    data = response.json()
+    assert isinstance(data, dict)
+    assert "emotions" in data
+    assert isinstance(data["emotions"], dict)
+    assert all(isinstance(score, float) for score in data["emotions"].values())
